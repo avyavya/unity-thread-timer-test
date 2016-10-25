@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-
+﻿
 
 namespace ThreadingTimer
 {
@@ -20,7 +19,6 @@ namespace ThreadingTimer
         ~Timer()
         {
             timer.Dispose();
-            Debug.Log("timer destroyed.");
         }
 
 
@@ -31,7 +29,6 @@ namespace ThreadingTimer
 
         public void SetTimeout(uint timeout, uint delay)
         {
-            Debug.Log("set timeout: " + timeout + ", delay: " + delay);
             IsTimeout = false;
             timer.Change(delay, timeout);
         }

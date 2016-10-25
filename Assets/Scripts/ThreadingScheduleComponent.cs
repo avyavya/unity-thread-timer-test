@@ -2,8 +2,11 @@
 using System;
 
 
+// 時間がきたらコールバック呼ぶだけ
+// スレッドプール使うので大量には使えない
 public class ThreadingScheduleComponent : MonoBehaviour
 {
+    
     private readonly ThreadingTimer.Timer timer = new ThreadingTimer.Timer();
 
     public event Action<ThreadingScheduleComponent> OnTimeout;
@@ -52,4 +55,5 @@ public class ThreadingScheduleComponent : MonoBehaviour
     {
         timer.Stop();
     }
+
 }
